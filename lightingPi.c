@@ -31,9 +31,9 @@ int main (int argc, char **argv)
       printf("Toggling light %s\n", argv[2]);
 
     } else { // Multiple lights
+    
       // Loop through each argument after toggle
-      int j = 0;
-      for (j = 0; j < argc - 2; j++) {         // Typecast our argument to an int         int light = (int)(argv[j + 2][0] - '0');         // Check to see if our light exists based on the size of the lights[] array
+      for (int j = 0; j < argc - 2; j++) {         // Typecast our argument to an int         int light = (int)(argv[j + 2][0] - '0');         // Check to see if our light exists based on the size of the lights[] array
         if (light > (sizeof(lights) / 4)) {
           printf("Cannot toggle light %d as it does not exist.\n", light);
         } else {
